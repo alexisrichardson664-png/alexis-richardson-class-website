@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    background: #fff8fb;
+    color: #493744;
+    text-align: center;
+}
+
+header {
+    padding: 35px 20px 25px;
+}
+
+.back-link {
+    display: inline-block;
+    color: #a64f79;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.eyebrow {
+    color: #c17b9c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 54px);
+    margin: 12px 0;
+}
+
+.intro {
+    color: #8c7385;
+    font-size: 15px;
+}
+
+main {
+    width: min(850px, 90%);
+    margin: 0 auto;
+}
+
+.room {
+    min-height: 330px;
+    border-radius: 24px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffe0ed, #f6c4df);
+    box-shadow: 0 15px 35px #d8a5bd30;
+    transition: background 0.5s ease;
+}
+
+.room-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 35px;
+}
+
+.room-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #a65f83;
+}
+
+.room h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.room-content p:not(.room-label) {
+    font-size: 14px;
+}
+
+.room-icon {
+    font-size: 65px;
+    margin-top: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.room-decor {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    color: #ffffffb8;
+    letter-spacing: 12px;
+}
+
+.mood-picker {
+    padding: 35px 0;
+}
+
+.mood-picker h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.mood-picker p {
+    color: #8c7385;
+    font-size: 14px;
+}
+
+.mood-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.mood-btn {
+    padding: 13px 20px;
+    border: 1px solid #ead4df;
+    border-radius: 30px;
+    background: white;
+    color: #65495a;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.mood-btn:hover {
+    transform: translateY(-3px);
+}
+
+.mood-btn.active {
+    background: #493744;
+    color: white;
+    border-color: #493744;
+}
+
+footer {
+    padding: 20px;
+    color: #b18b9f;
+    font-size: 12px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Different room moods */
+
+.room.happy {
+    background: linear-gradient(135deg, #fff0b8, #ffc982);
+}
+
+.room.chill {
+    background: linear-gradient(135deg, #d8f0df, #a9d9c3);
+}
+
+.room.mysterious {
+    background: linear-gradient(135deg, #dcd5ff, #aaa1df);
+}
+
+@media (max-width: 500px) {
+    header {
+        padding-top: 25px;
+    }
+
+    .room {
+        min-height: 300px;
+    }
+
+    .room h2 {
+        font-size: 26px;
+    }
+
+    .mood-btn {
+        padding: 12px 15px;
+    }
+}
